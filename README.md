@@ -13,10 +13,10 @@ Desta forma o contexto se torna independente das estratéias concretas, então v
 
 # Chain of Responsibility
 
-O Chain of Responsibiity é um padrão de projeto comportamental que permite que você passe pedidos por uma corrente de handlers. Ao receber um pedido, cada handler decidade se processo o pedido ou o passa adiante para o próxim handler na corrente.
+O Chain of Responsibility é um padrão de projeto comportamental que permite que você passe pedidos por uma corrente de handlers. Ao receber um pedido, cada handler decide se processa o pedido ou o passa adiante para o próximo handler na corrente.
 
 O Chain of Responsibility se baseia em transformar certos comportamentos em objetos solitários chamados handlers.
 
-O padrão sugere que você ligue esses handlers em uma corrente. Cada handler ligado tem um campo para armazenar uma referência ao próximo handler da corrente. Além de processar o pedido, handlers o passam adiante na corrente. O pedido viaa através da corrente até que todos os hanlder tiveram uma chance de processá-lo.
+O padrão sugere que você ligue esses handlers em uma corrente. Cada handler ligado tem um campo para armazenar uma referência ao próximo handler da corrente. Além de processar o pedido, handlers o passam adiante na corrente. O pedido viaja através da corrente até que todos os hanlder tiveram uma chance de processá-lo.
 
 Um handler pode decidir passar o pedido adiante na corrente e efetivamente para qualquer futuro processamento.
