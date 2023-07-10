@@ -20,3 +20,9 @@ O Chain of Responsibility se baseia em transformar certos comportamentos em obje
 O padrão sugere que você ligue esses handlers em uma corrente. Cada handler ligado tem um campo para armazenar uma referência ao próximo handler da corrente. Além de processar o pedido, handlers o passam adiante na corrente. O pedido viaja através da corrente até que todos os hanlder tiveram uma chance de processá-lo.
 
 Um handler pode decidir passar o pedido adiante na corrente e efetivamente para qualquer futuro processamento.
+
+# Template Method
+
+O Template Method é um padrão de projeto comportamental que define o esqueleto de um algoritmo na superclasse mas deixa as subclasses sobrescreverem etapas específicas dos algoritmos sem modificar sua estrutura.
+
+O padrão sugere que você quebre um algoritmo em uma série de etapas, transforme essas etapas em métodos, e coloque uma série de chamadas para esses métodos dentro de um único método padrão. As etapas podem ser tanto abstratas, ou ter alguma implementação padrão. Para usar o algoritmo, o cliente deve fornecer sua própria sublcasse, implementar todas as etapas abstratas, e sobrescrever algumas das opcionais se necessário (mas não o próprio método padrão).
