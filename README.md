@@ -1,3 +1,6 @@
+# UTILIZE OS PADRÕES DE PROJETO SOMENTE QUANDO ELES FOREM NECESSÁRIOS
+Analise quando faz sentido implementar cada um dos padrões. Projetos muitos simples só irão ficar complexos sem necessidade.
+
 # Strategy
 
 O Strategy é um padrão de projeto comportamental que permite que você defina uma família de 
