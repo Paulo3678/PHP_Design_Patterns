@@ -1,6 +1,6 @@
 <?php
 
-namespace EstadosOrcamento;
+namespace Alura\DesignPattern\EstadosOrcamento;
 
 use Alura\DesignPattern\Orcamento;
 use DomainException;

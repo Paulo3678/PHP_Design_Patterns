@@ -4,7 +4,7 @@ namespace Alura\DesignPattern\EstadosOrcamento;
 
 use Alura\DesignPattern\Orcamento;
 use Alura\DesignPattern\EstadosOrcamento\Aprovado;
-use EstadosOrcamento\EstadoOrcamento;
+use Alura\DesignPattern\EstadosOrcamento\EstadoOrcamento;
 
 class EmAprovacao extends EstadoOrcamento
 {

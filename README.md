@@ -40,3 +40,19 @@ Ao invés de implementar todos os comportamentos por conta própria, o objeto or
 Para fazer a transição do contexto para outro estado, substitua o objeto do estado ativo por outro objeto que represente o novo estado. Isso é possível somente se todas as classes de estados seguirem a mesma interface e o próprio contexto funcione com esses objetos através daquela interface.
 
 Essa estrutura pode ser parecida com o padrão Strategy, mas há uma diferença chave. No padrão State, os estados em particular podem estar cientes de cada um e iniciar transições de um estado para outro, enquanto que strategies quase nunca sabe sobre as outras strategies.
+
+# Command
+
+O Command é um padrão de projeto comportamental que transforma um pedido em um objeto independente que contém toda a infomação sobre o pedido. Essa transformação permite que você arametrize métodos com diferentes pedidos, atrase ou coloque a execução do pedido em uma fila, e suporte operações que não podem ser feitas.
+
+Um bom projeto de software quase sempre se baseia no princípio de separação de interesses o que geralmente resulta em dividir a aplicação em camadas. O exemplo mais comum: uma camada para a interface gráfica do usuário e outra camada para a lógica do negócio. A camada GUI é responsável por renderizar uma bonita imagem na tela, capturando quaisquer dados e mostrando resultados do que o usuário e a aplicação estão fazendo. Conteudo, quando se trata de fazer algo importante, como calcular a trajetória da la ou compor um relatório anual, a camada GUI delaga o trabalho para a camada inferior da lógica do negócio.
+
+Dentro do código pode parecer assim: Um objeto GUI chama um método da lógica do negócio, passando alguns argumentos. Este processo é geralmente descrito como um objeto mandando um pedido para outro.
+
+O padrão Command sugere que os objetos GUI não enviem esses edidos diretamente. Ao invés disso, você deve extrair todos os detalhes do pedido, tais como o obheto a ser chamado, o nome do método, e a lista de argumentos em uma classe comando separada que tem apenas um método que aciona esse pedido.
+
+Objetos comando servem como links entre vários objetos GUI e de lógica de negócio. De agora em dante, o obejeto GUI não precisa saber qual objeto de lógica do negócio irá receber o pedido e como ele vai ser processado. O obhet GUI deve acionar o comando, que irá lidar com todos os detalhes.
+
+O próximo passo é fazer seus comandos implementarem a mesma interface. Geralmente é apenas um método de execução que não pega parâmetros. Essa interface permite que você use vários comandos com o mesmo remetente do pedido, sem acoplá-lo com as classes concretas dos comandos. Como um bônus, agora você pode trocar os objetos comando ligados ao remetente, efetivamente mudando o comportamento do remetente no momento da execução.
+
+Você pode ter notado uma peça faltante nesse quebra cabeças, que são os parâmetros do pedido. Um objeto GUI pode ter fornecido ao objeto da camada de negócio com alguns parâmetros, como deveremos passar os detalhes do pedido para o destinatário? O comando deve ser pré-configurado com esses dados, ou ser capaz de obtê-los por conta própria.

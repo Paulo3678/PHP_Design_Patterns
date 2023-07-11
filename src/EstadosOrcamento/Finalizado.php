@@ -4,7 +4,7 @@ namespace Alura\DesignPattern\EstadosOrcamento;
 
 use DomainException;
 use Alura\DesignPattern\Orcamento;
-use EstadosOrcamento\EstadoOrcamento;
+use Alura\DesignPattern\EstadosOrcamento\EstadoOrcamento;
 
 class Finalizado extends EstadoOrcamento
 {
