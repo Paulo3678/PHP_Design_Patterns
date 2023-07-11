@@ -2,9 +2,9 @@
 
 namespace Alura\DesignPattern\EstadosOrcamento;
 
-use Alura\DesignPattern\Orcamento;
 use DomainException;
-use EstadosOrcamento\EstadoOrcamento;
+use Alura\DesignPattern\Orcamento;
+use Alura\DesignPattern\EstadosOrcamento\EstadoOrcamento;
 
 class Reprovado extends EstadoOrcamento
 {

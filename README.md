@@ -72,3 +72,15 @@ Agora, sempre que um eveto importante acontece com a publicadora, ele passa para
 Aplicações reais podem ter dúzias de diferentes classes assinantes que estão interessadas em acompanhar eventos da mesma classe publicadora. Você não iria querer acoplar a publicadora a todas essas classes. Além disso, você pode nem estar ciente de algumas delas de antemão se a sua classe publicadora deve ser usada por outra pessoa.
 
 É por isso que é crucial que todos os assinantes implementem a mesma interface e que a publicadora comunique-se com eles aenas através daquela interface. Essa interface deve declarar o método de notificação junto com um conjunto de parâmetros que a publicadora pode usar para passar alguns dados contextuais junto com a notifiação.
+
+# Iterator
+
+O Iterator é um padrão de projeto comportamental que permite a você percorrer eleentos de uma coleção sem expor as representações dele (lista, pilha, árvore, etc).
+
+A ideia principal do pardrão Iterator é extrair o comportamento de travessia de uma coleção para um objeto separado chamado de iterador.
+
+Além de implementar o algoritmo em si, um objeto iterador encapsula todos os detalhes da travessia, tais como a posição atual e quantos elementos faltam para chegar ao fim. Por causa disso, alguns iteradors podem averiguar a mesma coleção ao mesmo tempo, independentemente um do outro.
+
+Geralmente, os iteradores fornecem um método primário para pegar elementos de uma coleção. O cliente pode manter esses métodos funcionando até que ele não retorne mais nada, o que significa que o iterador atravessou todos os elementos.
+
+Todos os iteradores devem implementar a mesma interface. Isso faz que o código cliente seja compatível com qualquer tipo de coleção ou qualquer algoritmo de travessia desde que haja um iterador apropriado. Se você precisar de uma maneira especial para a travessia de uma coleção, você só precisa criar uma nova classe iterador, sem ter que mudar a coleção ou o cliente.
